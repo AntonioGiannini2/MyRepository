@@ -1,0 +1,36 @@
+header {
+    background-color: aqua;
+}
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+nav li {
+    display: inline;
+}
+a:hover {
+    background-color: hotpink;
+}
+a:focus {
+    background-color: aqua;
+}
+a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+/* Questo stile serve per la sezione X su richiesta del direttore*/
+.listaOrdinataRomana {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    /* Per usare un'immagine come list style si usa la seguente sintassi*/
+    /* list-style-image: url(); */
+}
+p {
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    text-shadow: 4px 5px 5px greenyellow;
+}

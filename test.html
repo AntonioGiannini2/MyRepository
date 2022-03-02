@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="
+        p1=(document.getElementById('1').innerHTML);
+        p2=(document.getElementById('2').innerHTML); 
+        (document.getElementById('2').innerHTML)=p1; 
+        (document.getElementById('1').innerHTML)=p2;">
+        ciao
+    </button>
+
+    <p id="1">a</p>
+    <p id="2">b</p>
+
+    <form>
+        <label for="number">Inserisci un numero</label>
+        <input type="text" id="number" name="number">
+        <input type="submit" value="Submit" onclick="document.write=`<p id='3'> Il numero inserito è ${number}</p>`">
+    </form>
+
+    <button onclick="if (number%2 == 0) {number++;} else {number--;}; document.getElementById('3').innerHTML= `Il nuovo numero è ${number}` ">Sostituisci Numero</button>
+
+</body>
+
+</html>

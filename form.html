@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Linka un file CSS a questa pagina-->
+    <link rel="stylesheet" href="css/miostile.css">
+</head>
+
+<body>
+    <h1>Prima Form Web</h1>
+    <!-- Web Form -->
+    <form action="" method="get">
+        <!-- Fieldset inscatola in un rettangolo quello che ha dentro-->
+        <fieldset>
+            <!-- Legend appare nel rettangolo del fieldset-->
+            <legend>Dati Anagrafici</legend>
+            <!-- Label definisce un'etichetta ed input definisce un tipo di input-->
+            <label>Cognome</label>
+            <input type="text" maxlength="30" size="30" placeholder="Inserisci qui il tuo cognome" name="cognome">
+            <br />
+            <label>Nome</label>
+            <input type="text" maxlength="30" size="30" placeholder="Inserisci qui il tuo nome" name="nome">
+            <br />
+            <label>Provincia</label>
+            <!-- Select crea un elenco con varie opzioni da dove scegliere una-->
+            <select name="provincia">
+                <option value="BA">Bari</option>
+                <option value="BT">BAT</option>
+                <option value="BR">Brindisi</option>
+                <option value="FG">Foggia</option>
+                <option value="LE">Lecce</option>
+                <option value="TA">Taranto</option>
+            </select>
+            <br />
+            <label>Data di nascita</label>
+            <input type="date" name="datanascita">
+            <br />
+            <label>Password</label>
+            <input type="password" name="password">
+            <br />
+            <label>Email</label>
+            <input type="email" name="email">
+            <br />
+            <label>Allega la tua foto</label>
+            <input type="file" multiple name="allegato">
+        </fieldset>
+        <fieldset>
+            <legend>Indagine</legend>
+            <label>Che colore ti piace?</label>
+            <br />
+            <input type="color" name="colore">
+            <br />
+            <br />
+            <label>Quanti libri leggi in un anno? </label>
+            <br />
+            <input type="radio" name="libri" value="zerocinque" checked>0-5
+            <input type="radio" name="libri" value="seidieci">6-10
+            <input type="radio" name="libri" value="oltredieci">oltre 10
+            <br />
+            <br />
+            <label>Che quotidiani leggi?</label>
+            <br />
+            <input type="checkbox" name="quotidiano" value="repubblica">Repubblica
+            <input type="checkbox" name="quotidiano" value="corriere">Corriere
+            <input type="checkbox" name="quotidiano" value="ilfatto">Il Fatto
+            <input type="checkbox" name="quotidiano" value="libero">Libero
+            <input type="checkbox" name="quotidiano" value="gdm">Gazzetta del Mezzogiorno
+            <input type="checkbox" name="quotidiano" value="lastampa">La Stampa
+            <br />
+            <br />
+            <label>Secondo te qual'&egrave; il miglior quotidiano?</label>
+            <br />
+            <!-- le list ti danno suggerimenti su cosa scrivere però puoi pure scrivere quello che vuoi -->
+            <input list="migliore">
+            <datalist id="migliore">
+                <option value="Repubblica"></option>
+                <option value="Corriere"></option>
+                <option value="Il Fatto"></option>
+                <option value="Libero"></option>
+                <option value="Gazzetta Del Mezzogiorno"></option>
+                <option value="La Stampa"></option>
+            </datalist>
+            <br />
+            <br />
+            <!-- text area crea un rettangolo dove puoi scrivere-->
+            <textarea rows="10" cols="80" name="commento" placeholder="Hai commenti?"></textarea>
+        </fieldset>
+        <!-- button crea bottoni con funzioni specifiche-->
+        <button type="submit">Invia</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+
+</html>

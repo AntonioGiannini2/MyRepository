@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web</title>
+    <link rel="stylesheet" href="css/GianniniAntonio.css">
+</head>
+
+<body>
+    <nav>
+        <p>
+            <button onclick="alert(`Ciao`)">Saluta</button>
+            <button><a href="https://www.uniba.it/">Uniba</a></button>
+            <button onclick="cambiaColore()">Cambia Colore</button>
+        </p>
+    </nav>
+    <section>
+        <p>ciao1</p>
+        <p>ciao2</p>
+        <p id="paragrafoTre">ciao3</p>
+        <p>ciao4</p>
+        <p>ciao5</p>
+    </section>
+    <script>
+        function cambiaColore() {
+            if (document.getElementById("paragrafoTre").style.color != `red`) {
+                document.getElementById("paragrafoTre").style.color = `red`;
+            }
+            else {
+                document.getElementById("paragrafoTre").style.color = "black";
+            }
+        }
+    </script>
+</body>
+
+</html>

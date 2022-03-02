@@ -1,0 +1,13 @@
+/* "*" è un selettore universale */
+* {color: blue;}
+/* Selettori di elemento */
+h1 {color: blueviolet; border: 3px;}
+legend, label {color: red;}
+table {border: solid 20px;}
+/* Selettori di classe, usare class="nomeclasse" come attributo a singoli tag da modificare */
+.evidenziato {background-color: aqua;}
+/* Si può creare una classe che si riferisce solo a un tag specifico */
+h2.titolo2evidenziato {color: red;}
+caption.titoloimportante {color: chocolate;}
+/* Selettore di id */
+#bottom {color: rgb(255, 91, 186);}

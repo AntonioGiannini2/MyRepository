@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi Javascript</title>
+    <script src="javascript/esercizi.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Esercizi Javascript</h1>
+    </header>
+    <section>
+        <h2>Esercizio 1: Calcola et&agrave; di una persona e gli anni mancanti a raggiungere il 100-esimo anno di et&agrave;</h2>
+        <p>
+            <button onclick="dataNascita = getDateOfBirth()">Clicca per inserire la tua data di nascita</button>
+        </p>
+        <p><button onclick="etàAttuale = calculateAge(dataNascita ,annoAttuale, meseAttuale, giornoAttuale); document.getElementById('età').innerHTML = `La tua età è ${etàAttuale}`; document.getElementById('100').innerHTML = `Gli anni mancanti a raggiungere il 100-esimo anno di et&agrave; sono: ${100-etàAttuale}`;"> Calcola et&agrave;</button></p>
+        <p id="età">La tua et&agrave; comparir&agrave; qui</p>
+        <p id="100">Gli anni mancanti a raggiungere il 100-esimo anno di et&agrave; appariranno qui</p>
+    </section>
+</body>
+</html>
