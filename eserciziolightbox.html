@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="plugin/glightbox/dist/css/glightbox.min.css">
+    <script src="plugin/glightbox/dist/js/glightbox.min.js"></script>
+</head>
+
+<body>
+    <a href="pictures/immagine.jpg" class="glightbox3" data-gallery="gallery1">
+        <img src="pictures/immagine_small.jpg" alt="scoglio in mezzo al mare" />
+    </a>
+    <a href="pictures/opera.png" class="glightbox3" data-gallery="gallery1">
+        <img src="pictures/opera_small.jpg" alt="arte moderna" />
+    </a>
+    <a href="pictures/tree.jpg" class="glightbox3" data-gallery="gallery1">
+        <img src="pictures/tree_small.jpg" alt="albero" />
+    </a>>
+    <script type="text/javascript">
+        const lightbox = GLightbox({
+            selector: `.glightbox3`
+        });
+    </script>
+</body>
+
+</html>

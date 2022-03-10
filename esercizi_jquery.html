@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(document).ready(function () {
+            $("div").hover(function () {
+                $(this).toggleClass("bordoNero");
+                $("img").toggleClass("ingrandimento");
+            });
+        });
+    </script>
+    <style>
+        .bordoNero {
+            border: 10px solid black;
+        }
+        .ingrandimento {
+            width: 375px;
+            left: -50px;
+            top: -50px;
+        }
+        img {
+            margin: auto;
+            position: absolute;
+            border: 0px;
+        }
+        div {
+            width: 275px;
+            height: 183px;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+            border: 10px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="pictures/immagine.jpg" alt="scoglio in mezzo al mare">
+    </div>
+
+</body>
+
+</html>

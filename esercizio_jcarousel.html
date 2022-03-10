@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="plugin/jcarousel-0.3.9/dist/jquery.jcarousel.min.js"></script>
+    <style>
+        .jcarousel-wrapper {
+            margin: 20px auto;
+            position: relative;
+            border: 10px solid #fff;
+            width: 400px;
+            height: 200px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 0 2px #999;
+            -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+        }
+
+        .jcarousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jcarousel ul {
+            width: 10000em;
+            position: relative;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .jcarousel li {
+            float: left;
+        }
+
+
+        .jcarousel-control-prev,
+        .jcarousel-control-next {
+            position: absolute;
+            top: 200px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background: #4E443C;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 0 1px #000;
+            font: 24px/27px Arial, sans-serif;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            -webkit-box-shadow: 0 0 2px #999;
+            -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+        }
+
+        .jcarousel-control-prev {
+            left: -50px;
+        }
+
+        .jcarousel-control-next {
+            right: -50px;
+        }
+
+        .jcarousel-control-prev:hover span,
+        .jcarousel-control-next:hover span {
+            display: block;
+        }
+
+        .jcarousel-control-prev.inactive,
+        .jcarousel-control-next.inactive {
+            opacity: .5;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <ul>
+                <li><img src="pictures/immagine.jpg" width="400" height="200" alt="scoglio in mezzo al mare" /></li>
+                <li><img src="pictures/opera.png" width="400" height="200" alt="arte moderna" /></li>
+                <li><img src="pictures/tree.jpg" width="400" height="200" alt="albero" /></li>
+            </ul>
+        </div>
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+    </div>
+
+    <script>
+        (function ($) {
+            $(function () {
+                $('.jcarousel').jcarousel({
+                    wrap: 'circular'
+                });
+
+                $('.jcarousel-control-prev')
+                    .on('jcarouselcontrol:active', function () {
+                        $(this).removeClass('inactive');
+                    })
+                    .on('jcarouselcontrol:inactive', function () {
+                        $(this).addClass('inactive');
+                    })
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
+
+                $('.jcarousel-control-next')
+                    .on('jcarouselcontrol:active', function () {
+                        $(this).removeClass('inactive');
+                    })
+                    .on('jcarouselcontrol:inactive', function () {
+                        $(this).addClass('inactive');
+                    })
+                    .jcarouselControl({
+                        target: '+=1'
+                    });
+            });
+        })(jQuery);
+
+    </script>
+</body>
+
+</html>

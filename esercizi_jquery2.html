@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#azienda").click(function(){
+                $("#listaAzienda").slideToggle("slow");
+                $("#listaProdotti").slideUp("slow");
+                $("#listaContatti").slideUp("slow");
+            });
+            $("#prodotti").click(function(){
+                $("#listaProdotti").slideToggle("slow");
+                $("#listaAzienda").slideUp("slow");
+                $("#listaContatti").slideUp("slow");
+            });
+            $("#contatti").click(function(){
+                $("#listaContatti").slideToggle("slow");
+                $("#listaAzienda").slideUp("slow");
+                $("#listaProdotti").slideUp("slow");
+            });
+        });
+    </script>
+    <style>
+        ul {
+            display: none;
+        }
+        h2 {
+            background-color: black;
+            color: white;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="azienda">Azienda</h2>
+    <ul id="listaAzienda">
+        <li>Chi siamo</li>
+        <li>Dove siamo</li>
+        <li>FAQ</li>
+    </ul>
+    <h2 id="prodotti">Prodotti</h2>
+    <ul id="listaProdotti">
+        <li>Catalogo</li>
+        <li>Speciali</li>
+        <li>Extra</li>
+    </ul>
+    <h2 id="contatti">Contatti</h2>
+    <ul id="listaContatti">
+        <li>Email</li>
+        <li>Telefono</li>
+        <li>Indirizzo</li>
+    </ul>
+</body>
+</html>

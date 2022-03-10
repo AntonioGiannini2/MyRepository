@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 1px solid black;
+            height: 20px;
+            text-align: center;
+        }        
+        button {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+            ;
+        }
+
+        #zero {
+            margin-left: 54px;
+        }
+
+        #add {
+            margin-left: 50px;
+        }
+
+        #multiply {
+            margin-left: 50px;
+        }
+
+        #equals {
+            margin-left: 50px;
+        }
+
+        input {
+            width: 99%;
+        }
+
+        div {
+            margin-left: 37%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="calculator"></p>
+
+    <div>        
+        <button id="seven" onclick="
+        operazione = operazione + '7';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">7</button>
+        <button id="eight" onclick="
+        operazione = operazione + '8';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">8</button>
+        <button id="nine" onclick="
+        operazione = operazione + '9';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">9</button>
+        <button id="add" onclick="
+        operazione = operazione + '+';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">+</button>
+        <button id="subtract" onclick="
+        operazione = operazione + '-';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">-</button>
+        <br />
+        <button id="four" onclick="
+        operazione = operazione + '4';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">4</button>
+        <button id="five" onclick="
+        operazione = operazione + '5';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">5</button>
+        <button id="six" onclick="
+        operazione = operazione + '6';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">6</button>
+        <button id="multiply" onclick="
+        operazione = operazione + '*';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">*</button>
+        <button id="divide" onclick="
+        operazione = operazione + '/';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">/</button>
+        <br />
+        <button id="one" onclick="
+        operazione = operazione + '1';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">1</button>
+        <button id="two" onclick="
+        operazione = operazione + '2';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">2</button>
+        <button id="three" onclick="
+        operazione = operazione + '3';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">3</button>
+        <button id="equals" onclick="
+        operazione = String(eval(operazione));
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+        operazione = '';
+        ">=</button>
+        <button id="delete" onclick="
+        operazione = operazione.slice(0, -1);
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+        ">Del</button>  
+        <br />
+        <button id="zero" onclick="
+        operazione = operazione + '0';
+        document.getElementById('calculator').innerHTML = `${operazione}`;
+         ">0</button> 
+    </div>
+    <script>
+        var operazione = '';
+    </script>
+</body>
+</html>

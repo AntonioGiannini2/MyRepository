@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("p").click(function() {
+                $(this).hide();
+            });
+        });
+
+        $(document).ready(function() {
+            $("button").click(function() {
+                var div = $("div");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ height: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ height: '100px', opacity: '0.8' }, "slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide(3000, function() {
+                    console.log("The paragraphs are now hidden");
+                });
+                console.log("Monkasteer");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>Click me!</p>
+    <p>Click me too!</p>
+
+    <button>Start animation</button>
+    <br />
+    <br />
+    <div style="background-color:hotpink; height:100px; width:100px; position: absolute;"></div>
+</body>
+
+</html>
