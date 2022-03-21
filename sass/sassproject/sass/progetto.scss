@@ -1,0 +1,48 @@
+$myvariable: blue;
+
+#myid {
+    color: $myvariable;
+    p {
+        font-size: 8px;
+    }
+}
+
+.classe {
+    background-color: $myvariable;
+    padding: 10px;
+    width: 80%;
+    height: 200px;
+    &:hover {
+        background-color: red;
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+%contenitore {
+    width: 100%;
+    color: yellow;
+}
+
+.prova {
+    @extend %contenitore;
+}
+
+@mixin mymix($colore, $font) {
+    font-size: $font;
+    background-color: $colore;
+    height: 200px;
+}
+
+.classmix {
+    @include mymix(blue, 10px);
+}
+
+$schermo: 768px;
+$media: "only screen and (max-width: #{$schermo})";
+
+@media #{$media} {
+    .classmix {
+        @include mymix(red, 20px);
+    }
+}
