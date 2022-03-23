@@ -1,0 +1,22 @@
+.carousel-caption {
+    bottom: 6rem;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: hotpink;
+}
+
+.btn-danger {
+    background-color: #28a59f;
+    border-color: #28a59f;
+}
+
+.btn-check:focus + .btn-danger, .btn-danger:focus {
+    background-color: #28a59f;
+    border-color: #28a59f;
+}
+
