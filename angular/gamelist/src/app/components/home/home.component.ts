@@ -30,12 +30,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  onSelectChange(event$: any): void {
+    this.searchGames(event$.target.value);
+  }
+
   searchGames(sort: string, search?: string): void {
     this.gameSub = this.httpService
     .getGameList(sort, search)
-    .subscribe((gameList: APIResponse<Game>) => {
-      this.games = gameList.results
-      console.log(gameList)
+    .subscribe((gameListResponse: APIResponse<Game>) => {
+      this.games = gameListResponse.results;
+      console.log(gameListResponse);
     });
   }
 

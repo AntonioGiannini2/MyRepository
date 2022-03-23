@@ -1,1 +1,27 @@
-<p>home works!</p>
+<div class="container pt-3">
+    <div class="row">
+      <div class="col-md-3 col-xs-6 ">
+        <!-- WILL BE A COMPONENT? -->
+        <select 
+            name="filterSearch" 
+            id="filterSearch" 
+            class="form-select" 
+            (change)="onSelectChange($event)"
+        >
+          <option selected>Ordina per</option>
+          <option value="name">Name</option>
+          <option value="-released">Released</option>
+          <option value="-added">Added</option>
+          <option value="-created">Created</option>
+          <option value="-updated">Updated</option>
+          <option value="-rating">Rating</option>
+          <option value="metacritic">Metacritic</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" *ngFor="let game of games">
+        <app-game-card [game]="game"></app-game-card>
+      </div>
+    </div>
+  </div>
