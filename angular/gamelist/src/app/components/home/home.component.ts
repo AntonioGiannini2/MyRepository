@@ -10,8 +10,9 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  public sort: string = '';
+  private sort: string = 'metacrit';
   public games: Array<Game> = [];
+  private search?: string;
   private routeSub: Subscription = new Subscription();
   private gameSub: Subscription = new Subscription();
 
@@ -22,16 +23,18 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {
-      if (params['game-search']) {
-        this.searchGames('metacrit', params['game-search'])
+      this.search = params['game-search'];
+      if (this.search) {
+        this.searchGames(this.sort, this.search)
       } else {
-        this.searchGames('metacrit')
+        this.searchGames(this.sort)
       }
     });
   }
 
   onSelectChange(event$: any): void {
-    this.searchGames(event$.target.value);
+    this.sort= event$.target.value;
+    this.searchGames(this.sort, this.search);
   }
 
   searchGames(sort: string, search?: string): void {
