@@ -1,4 +1,4 @@
-<div class="card" *ngIf="game">
+<div class="card" *ngIf="game" (click)="openGameDetails(game.id)">
     <img class="card-img-top" style="height: 10rem;" src="{{game.background_image}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{game.name}}</h5>
