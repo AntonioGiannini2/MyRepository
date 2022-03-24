@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'
 import { DetailsComponent } from './details.component';
+import { RouterModule } from '@angular/router'
+
 
 const routes = [
     {
-        path: 'id',
+        path: ':id',
         component: DetailsComponent,
     },
 ];

@@ -47,6 +47,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-
+    if (this.gameSub) {
+      this.gameSub.unsubscribe();
+    }
+    if(this.routeSub) {
+      this.routeSub.unsubscribe();
+    }
   }
 }
