@@ -1,0 +1,66 @@
+<div class="container mt-5">
+    <div class="row">
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 mb-5">
+            <!-- Template Driven Form -->
+            <div class="card">
+                <div class="card-header">Template Driven Form</div>
+                <div class="card-body">
+                    <form (ngSubmit)="onCreateGamerTemplateDriven(gamerForm);" #gamerForm="ngForm">
+                        <div class="mb-3">
+                            <label for="firstname" class="form-label">Name</label>
+                            <input type="text" class="form-control" minlength="3" id="firstname" name="firstname"
+                                required ngModel>
+                            <div class="form-text">Insert your name</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastname" class="form-label">Surname</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname" required ngModel>
+                            <div class="form-text">Insert your surname</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Describe yourself</label>
+                            <textarea class="form-control" id="content" name="content" rows="3" required ngModel>
+                            </textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" [disabled]="!gamerForm.valid">Add gamer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-5">
+            <!-- Reactive Form -->
+            <div class="card">
+                <div class="card-header">Reactive Form</div>
+                <div class="card-body">
+                    <form [formGroup]="gamerReactiveForm" (ngSubmit)="onCreateGamerReactive()">
+                        <div class="mb-3">
+                            <label for="reactFirstname" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="reactFirstname" formControlName="firstname">
+                            <div class="form-text">Insert your name</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reactLastname" class="form-label">Surname</label>
+                            <input type="text" class="form-control" id="reactLastname" formControlName="lastname">
+                            <div class="form-text">Insert your surname</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" formControlName="email">
+                            <div id="emailHelp" class="form-text">Insert your e-mail</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reactContent" class="form-label">Describe yourself</label>
+                            <textarea class="form-control" id="reactContent" formControlName="content" rows="3">
+                            </textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

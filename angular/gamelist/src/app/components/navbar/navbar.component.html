@@ -1,9 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="navbar-nav w-100 mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/details/add">{{'add gamers' | titlecase}}</a>
+          </li>
+        </ul>
         <form class="d-flex" #form="ngForm" (ngSubmit)="onSubmit(form)">
-          <input class="form-control me-2" type="search" placeholder="Search 500k+ games" name="search" aria-label="Search" ngModel>
+          <input class="form-control me-2" type="search" placeholder="Search games" name="search" aria-label="Search" ngModel>
           <button class="btn btn-success" type="submit">Search</button>
+          
         </form>
     </div>
   </nav>
