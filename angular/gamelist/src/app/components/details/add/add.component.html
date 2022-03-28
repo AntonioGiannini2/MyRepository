@@ -1,6 +1,12 @@
 <div class="container mt-5">
     <div class="row">
-
+        <div *ngIf="gamers$ | async as gamers" class="col-lg-6 offset-lg-3 mb-5">
+            <h5>Gamers:</h5>
+            <div class="list-group">
+                <a *ngFor="let gamer of gamers" (click)="onSelectGamer(gamer)" [class.active]="selectedId === gamer.id" 
+                class="list-group-item list-group-item-action active">
+            </div>
+        </div>
     </div>
 
     <div class="row">
@@ -57,6 +63,7 @@
                             <textarea class="form-control" id="reactContent" formControlName="content" rows="3">
                             </textarea>
                         </div>
+                        <button type="submit" class="btn btn-primary" [disabled]="!gamerReactiveForm.valid">Add gamer</button>
                     </form>
                 </div>
             </div>
