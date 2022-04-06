@@ -13,7 +13,7 @@ namespace ConsoleApp1
             Console.WriteLine("Hello world!");
             Console.WriteLine("Quanti anni hai?");
             string età = Console.ReadLine();
-            int etàIntera;
+            int etàIntera = 0;
 
             try
             {
@@ -30,27 +30,29 @@ namespace ConsoleApp1
                 catch (Exception)
                 {
                     Console.WriteLine("Capisco che non sei nato digital ma fatti un corso...");
-                    throw;
+                    
                 }
                 
-                throw;
+                
             }
 
-
-
-            if (etàIntera > 50)
+            if (etàIntera != 0)
             {
-                Console.WriteLine("Ti stai appropinquando alla vecchiaia (a grandi passi)");
-            }
-            else if (etàIntera > 44 && etàIntera <= 50)
-            {
-                Console.WriteLine("Stai trapassando...");
-            }
-            else
-            {
-                Console.WriteLine("Godi la vita che sei giovane (ancora...)");
-            }
 
+                if (etàIntera > 50)
+                {
+                    Console.WriteLine("Ti stai appropinquando alla vecchiaia (a grandi passi)");
+                }
+                else if (etàIntera > 44 && etàIntera <= 50)
+                {
+                    Console.WriteLine("Stai trapassando...");
+                }
+                else
+                {
+                    Console.WriteLine("Godi la vita che sei giovane (ancora...)");
+                }
+
+            }
             Console.WriteLine("Grazie!");
             Console.ReadLine();
         }
